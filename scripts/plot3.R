@@ -1,0 +1,8 @@
+hpc <- read.csv("data/hpc.csv")
+png(filename = "plots/plot3.png", width = 480, height = 480)
+plot(hpc$Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering", xaxt="n", col="black")
+lines(hpc$Sub_metering_2, col="red")
+lines(hpc$Sub_metering_3, col="blue")
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black", "red", "blue"), pch="—")
+axis(1, c(1, nrow(hpc) / 2, nrow(hpc)), c("Thu", "Fri", "Sat"))
+dev.off()
