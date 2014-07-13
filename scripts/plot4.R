@@ -2,7 +2,7 @@ hpc <- read.csv("data/hpc.csv")
 png(filename = "plots/plot4.png", width = 480, height = 480)
 par(mfrow = c(2,2))
 
-plot(hpc$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)", xaxt="n")
+plot(hpc$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power", xaxt="n")
 axis(1, c(1, nrow(hpc) / 2, nrow(hpc)), c("Thu", "Fri", "Sat"))
 
 plot(hpc$Voltage, type = "l", xlab = "datetime", ylab = "Voltage", xaxt="n")
