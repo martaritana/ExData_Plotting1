@@ -1,0 +1,7 @@
+hpc <- read.csv("data/hpc.csv")
+png(filename = "plots/plot2.png", width = 480, height = 480)
+Sys.setlocale(locale = "C")
+# hpc$weekdays <- strtrim(weekdays(as.Date(hpc$Date_Time)), 3)
+plot(hpc$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)", xaxt="n")
+axis(1, c(1, nrow(hpc) / 2, nrow(hpc)), c("Thu", "Fri", "Sat"))
+dev.off()
